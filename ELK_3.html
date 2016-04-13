@@ -21,21 +21,21 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Ups and Downs" />
-<meta name="description" content="针对edx平台的升级数据库迁移是重中之重，但往往有很多有些人忽视这方面的问题，导致平台升级出现各种坑。下面针对dogwood和brich两个版本的数据进行对比，希望能给折腾数据的小伙伴一点帮助 ..." />
-<meta name="keywords" content="edx">
+<meta name="description" content="Logstash常用插件介绍 input 插件 file: 文件的流事件 ..." />
+<meta name="keywords" content="ELK">
 <meta property="og:site_name" content="Ups and Downs"/>
-<meta property="og:title" content="edx主要数据"/>
-<meta property="og:description" content="针对edx平台的升级数据库迁移是重中之重，但往往有很多有些人忽视这方面的问题，导致平台升级出现各种坑。下面针对dogwood和brich两个版本的数据进行对比，希望能给折腾数据的小伙伴一点帮助 ..."/>
+<meta property="og:title" content="Logstash常用插件介绍"/>
+<meta property="og:description" content="Logstash常用插件介绍 input 插件 file: 文件的流事件 ..."/>
 <meta property="og:locale" content="zh_CN"/>
-<meta property="og:url" content="http://liyouxi.github.io/something-interesting-3.html"/>
+<meta property="og:url" content="http://liyouxi.github.io/ELK_3.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-04-08 00:00:00+08:00"/>
+<meta property="article:published_time" content="2016-04-13 11:00:00+08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="http://liyouxi.github.io/author/ups-and-downs.html">
-<meta property="article:section" content="edx"/>
-<meta property="article:tag" content="edx"/>
+<meta property="article:section" content="ELK"/>
+<meta property="article:tag" content="ELK"/>
 <meta property="og:image" content="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png">
-  <title>Ups and Downs &ndash; edx主要数据</title>
+  <title>Ups and Downs &ndash; Logstash常用插件介绍</title>
 </head>
 <body>
   <aside>
@@ -73,17 +73,35 @@
 
 <article>
   <header>
-    <h1 id="something-interesting-3">edx主要数据</h1>
-    <p>Posted on 2016-04-08(星期五) 00:00 in <a href="http://liyouxi.github.io/category/edx.html">edx</a></p>
+    <h1 id="ELK_3">Logstash常用插件介绍</h1>
+    <p>Posted on 2016-04-13(星期三) 11:00 in <a href="http://liyouxi.github.io/category/elk.html">ELK</a></p>
   </header>
   <div>
     <hr />
-<p>针对edx平台的升级数据库迁移是重中之重，但往往有很多有些人忽视这方面的问题，导致平台升级出现各种坑。下面针对dogwood和brich两个版本的数据进行对比，希望能给折腾数据的小伙伴一点帮助：</p>
-<h2>edx 数据</h2>
+<h2>Logstash常用插件介绍</h2>
+<h3>input 插件</h3>
+<p><strong>file:</strong> 文件的流事件</p>
+<p><strong>stdin:</strong>从标准输入读取事件</p>
+<p><strong>syslog：</strong>读取syslog消息事件</p>
+<p><strong>redis：</strong>从一个复述实例读取事件</p>
+<p><strong>http：</strong>在HTTP或HTTPS接收事件</p>
+<p><strong>elasticsearch：</strong>从一个Elasticsearch集群读取查询结果</p>
+<h3>output 插件</h3>
+<p>一个输出插件将事件数据发送到一个特定的目的地。</p>
+<p><strong>csv：</strong>将事件写入磁盘分隔的格式</p>
+<p><strong>email：</strong>将电子邮件发送到指定的地址当输出</p>
+<p><strong>elasticsearch：</strong>将日志存储在Elasticsearch</p>
+<p><strong>file：</strong>将事件写到磁盘上的文件</p>
+<p><strong>http：</strong>将事件发送给一个通用HTTP或HTTPS端点</p>
+<h3>filter 插件</h3>
+<p>进行一个事件的中一个过滤器插件。根据事件的特性，过滤器经常使用有条件的。</p>
+<h3>codec插件</h3>
+<p>一个更改事件数据表示的编解码器插件。编解码器基本上是流可以作为输入或输出的一部分运行过滤器。</p>
+<p>更多插件和详细信息和使用方法请参阅：<a href="https://www.elastic.co/guide/en/logstash/current/index.html">https://www.elastic.co/guide/en/logstash/current/index.html</a></p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="http://liyouxi.github.io/tag/edx.html">edx</a>
+      <a href="http://liyouxi.github.io/tag/elk.html">ELK</a>
     </p>
   </div>
 </article>
@@ -101,9 +119,9 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "name": "edx主要数据",
-  "headline": "edx主要数据",
-  "datePublished": "2016-04-08 00:00:00+08:00",
+  "name": "Logstash常用插件介绍",
+  "headline": "Logstash常用插件介绍",
+  "datePublished": "2016-04-13 11:00:00+08:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
@@ -111,8 +129,8 @@
     "url": "http://liyouxi.github.io/author/ups-and-downs.html"
   },
   "image": "http://7xofqa.com1.z0.glb.clouddn.com/myblog.png",
-  "url": "http://liyouxi.github.io/something-interesting-3.html",
-  "description": "针对edx平台的升级数据库迁移是重中之重，但往往有很多有些人忽视这方面的问题，导致平台升级出现各种坑。下面针对dogwood和brich两个版本的数据进行对比，希望能给折腾数据的小伙伴一点帮助 ..."
+  "url": "http://liyouxi.github.io/ELK_3.html",
+  "description": "Logstash常用插件介绍 input 插件 file: 文件的流事件 ..."
 }
 </script></body>
 </html>
