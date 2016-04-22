@@ -21,21 +21,21 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Ups and Downs" />
-<meta name="description" content="Linux常用命令 安装和登录命令：login、shutdown、halt ..." />
+<meta name="description" content="Ubuntu日志介绍 /var/log/alternatives.log-更新替代信息都记录在这个文件中 ..." />
 <meta name="keywords" content="Linux">
 <meta property="og:site_name" content="Ups and Downs"/>
-<meta property="og:title" content="Linux常用命令"/>
-<meta property="og:description" content="Linux常用命令 安装和登录命令：login、shutdown、halt ..."/>
+<meta property="og:title" content="ubuntu日志介绍"/>
+<meta property="og:description" content="Ubuntu日志介绍 /var/log/alternatives.log-更新替代信息都记录在这个文件中 ..."/>
 <meta property="og:locale" content="zh_CN"/>
-<meta property="og:url" content="http://liyouxi.github.io/Linux_1.html"/>
+<meta property="og:url" content="http://liyouxi.github.io/Linux_3.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-04-07 12:00:00+08:00"/>
+<meta property="article:published_time" content="2016-04-14 17:00:00+08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="http://liyouxi.github.io/author/ups-and-downs.html">
 <meta property="article:section" content="Linux"/>
 <meta property="article:tag" content="Linux"/>
 <meta property="og:image" content="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png">
-  <title>Ups and Downs &ndash; Linux常用命令</title>
+  <title>Ups and Downs &ndash; ubuntu日志介绍</title>
 </head>
 <body>
   <aside>
@@ -73,33 +73,47 @@
 
 <article>
   <header>
-    <h1 id="Linux_1">Linux常用命令</h1>
-    <p>Posted on 2016-04-07(星期四) 12:00 in <a href="http://liyouxi.github.io/category/linux.html">Linux</a></p>
+    <h1 id="Linux_3">ubuntu日志介绍</h1>
+    <p>Posted on 2016-04-14(星期四) 17:00 in <a href="http://liyouxi.github.io/category/linux.html">Linux</a></p>
   </header>
   <div>
     <hr />
-<h1>Linux常用命令</h1>
-<ul>
-<li>
-<p>安装和登录命令：<code>login、shutdown、halt、reboot、install、mount、umount、chsh、exit、last；</code></p>
-</li>
-<li>
-<p>文件处理命令：<code>file、mkdir、grep(文件索引)、dd、find、mv、ls、diff、cat、ln；</code></p>
-</li>
-<li>
-<p>系统管理相关命令：<code>df、top、free、quota、at、lp、adduser、groupadd、kill、crontab；</code></p>
-</li>
-<li>
-<p>网络操作命令：
- <code>ifconfig、ip、ping、netstat、telnet、ftp、route、rlogin、rcp、finger、mail、nslookup；</code></p>
-</li>
-<li>
-<p>系统安全相关命令：<code>passwd、su、umask、chgrp、chmod、chown、chattr、sudo ps、who；</code></p>
-</li>
-<li>
-<p>其它命令：<code>tar、unzip、gunzip、unarj、mtools、man、unendcode、uudecode。</code></p>
-</li>
-</ul>
+<h2>Ubuntu日志介绍</h2>
+<p>/var/log/alternatives.log-更新替代信息都记录在这个文件中</p>
+<p>/var/log/apport.log -应用程序崩溃记录</p>
+<p>/var/log/apt/   -用apt-get安装卸载软件的信息</p>
+<p>/var/log/auth.log  -登录认证log</p>
+<p>/var/log/boot.log  -包含系统启动时的日志。</p>
+<p>/var/log/btmp    -记录所有失败启动信息</p>
+<p>/var/log/Consolekit  - 记录控制台信息</p>
+<p>/var/log/cpus     - 涉及所有打印信息的日志</p>
+<p>/var/log/dist-upgrade  - dist-upgrade这种更新方式的信息</p>
+<p>/var/log/dmesg    -包含内核缓冲信息（kernel ringbuffer）。在系统启动时，显示屏幕上的与硬件有关的信息</p>
+<p>/var/log/dpkg.log   - 包括安装或dpkg命令清除软件包的日志。</p>
+<p>/var/log/faillog    - 包含用户登录失败信息。此外，错误登录命令也会记录在本文件中。</p>
+<p>/var/log/fontconfig.log -与字体配置有关的log。</p>
+<p>/var/log/fsck     - 文件系统日志</p>
+<p>/var/log/faillog   -包含用户登录失败信息。此外，错误登录命令也会记录在本文件中。</p>
+<p>/var/log/hp/</p>
+<p>/var/log/install/</p>
+<p>/var/log/jokey.log</p>
+<p>/var/log/kern.log –包含内核产生的日志，有助于在定制内核时解决问题。</p>
+<p>/var/log/lastlog —记录所有用户的最近信息。这不是一个ASCII文件，因此需要用lastlog命令查看内容。</p>
+<p>/var/log/faillog –包含用户登录失败信息。此外，错误登录命令也会记录在本文件中。</p>
+<p>/var/log/lightdm/</p>
+<p>/var/log/mail/ – 这个子目录包含邮件服务器的额外日志。</p>
+<p>/var/log/mail.err    -类似于上面的</p>
+<p>/var/log/news/</p>
+<p>/var/log/pm-powersave.log</p>
+<p>/var/log/samba/ –包含由samba存储的信息。</p>
+<p>/var/log/syss.log</p>
+<p>/var/log/speech-dispacher/</p>
+<p>/var/log/udev</p>
+<p>/var/log/ufw.log</p>
+<p>/var/log/upstart/</p>
+<p>/var/log/uattended-upgrades/</p>
+<p>/var/log/wtmp —包含登录信息。使用wtmp可以找出谁正在登陆进入系统，谁使用命令显示这个文件或信息等。</p>
+<p>/var/log/xorg.*.log— 来自X的日志信息。</p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -121,9 +135,9 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "name": "Linux常用命令",
-  "headline": "Linux常用命令",
-  "datePublished": "2016-04-07 12:00:00+08:00",
+  "name": "ubuntu日志介绍",
+  "headline": "ubuntu日志介绍",
+  "datePublished": "2016-04-14 17:00:00+08:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
@@ -131,8 +145,8 @@
     "url": "http://liyouxi.github.io/author/ups-and-downs.html"
   },
   "image": "http://7xofqa.com1.z0.glb.clouddn.com/myblog.png",
-  "url": "http://liyouxi.github.io/Linux_1.html",
-  "description": "Linux常用命令 安装和登录命令：login、shutdown、halt ..."
+  "url": "http://liyouxi.github.io/Linux_3.html",
+  "description": "Ubuntu日志介绍 /var/log/alternatives.log-更新替代信息都记录在这个文件中 ..."
 }
 </script></body>
 </html>
