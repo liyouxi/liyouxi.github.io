@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-04-21T17:00:00+08:00</updated><entry><title>hive学习笔记</title><link href="http://liyouxi.github.io/hadoop_1.html" rel="alternate"></link><published>2016-04-21T17:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-21:hadoop_1.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-04-27T00:00:00+08:00</updated><entry><title>insight 分析开发介绍</title><link href="http://liyouxi.github.io/edx_4.html" rel="alternate"></link><published>2016-04-27T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-27:edx_4.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;insight 分析开发介绍&lt;/h2&gt;
+&lt;h3&gt;关于Analytics&lt;/h3&gt;
+&lt;p&gt;Analytics的架构图，来自2015 Open edX Conference
+&lt;img alt="insight" src="http://7xofqa.com1.z0.glb.clouddn.com/Architecture%20diagram.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;h4&gt;Pipeline是什么?&lt;/h4&gt;
+&lt;p&gt;Pipeline是批处理数据处理引擎。它读取各种EDX服务产生的原始数据量大，分析它产生有用的报告。并将分析结果存储在MySQL数据库，详细信息请看analytics data api。&lt;/p&gt;
+&lt;p&gt;该Pipeline的代码在GitHub库中的&lt;a href="https://github.com/edx/edx-analytics-pipeline"&gt;edx-analytics-pipeline&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;它是一个有效的工作流引擎，通过各种各样的数据处理技术来执行，目前主要使用的Python，Hadoop、Hive和Sqoop。&lt;/p&gt;
+&lt;h4&gt;Insights是什么?&lt;/h4&gt;
+&lt;p&gt;Insights是Open edX的重要特性之一，它可以对学习数据进行数据分析，并将分析结果展现出来。&lt;/p&gt;
+&lt;h4&gt;Insights可以运行，但无法登陆的解决方案&lt;/h4&gt;
+&lt;p&gt;可能是oauth2没设置好导致这个错误，请参考&lt;a href="https://openedx.atlassian.net/wiki/display/AN/Configuring+Insights+for+Open+ID+Connect+SSO+with+LMS"&gt;Configuring Insights for Open ID Connect SSO with LMS &lt;/a&gt;。&lt;/p&gt;
+&lt;h4&gt;问题咨询途径?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://openedx.slack.com"&gt;Analytics Open edX slack channel&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://groups.google.com/forum/#!forum/openedx-analytics"&gt;openedx-analytics&lt;/a&gt; google group&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;安装配置连接&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://openedx.atlassian.net/wiki/display/OpenOPS/edX+Analytics+Installation"&gt;edX Analytics Installation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://edx.readthedocs.org/projects/edx-installing-configuring-and-running/en/latest/analytics/install_analytics.html#options-for-installing-edx-insights"&gt;Options for Installing edX Insights&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="edx insight"></category></entry><entry><title>hive学习笔记</title><link href="http://liyouxi.github.io/hadoop_1.html" rel="alternate"></link><published>2016-04-21T17:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-21:hadoop_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;hive学习笔记&lt;/h2&gt;
 &lt;p&gt;hive是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并且Hive的操作类似于SQL操作，用户可以使用SQL语句对它进行查询等相关操作。&lt;/p&gt;
 &lt;p&gt;学习链接：&lt;/p&gt;
