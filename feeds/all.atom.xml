@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-04-27T00:00:00+08:00</updated><entry><title>insight 分析开发介绍</title><link href="http://liyouxi.github.io/edx_4.html" rel="alternate"></link><published>2016-04-27T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-27:edx_4.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-05-05T00:00:00+08:00</updated><entry><title>课程转移字幕问题解决方案</title><link href="http://liyouxi.github.io/edx_5.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_5.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;课程转移字幕问题解决方案&lt;/h2&gt;
+&lt;p&gt;在Cypress版中字幕的默认格式为&lt;code&gt;table&lt;/code&gt;，将Cypress版中导出的课程再导入到Dogwood版中时会发现字幕无法显示，是因为Dogwood版中字幕格式没有&lt;code&gt;table&lt;/code&gt;这个字段。&lt;/p&gt;
+&lt;h3&gt;解决方案&lt;/h3&gt;
+&lt;p&gt;解压导出的课程文件会发现字幕字段是由video目录下的文件中控制的，因此只需要将video下文件中的&lt;code&gt;table&lt;/code&gt;字段替换成&lt;code&gt;zh&lt;/code&gt;就行。替换命令&lt;code&gt;find ./ -type f -print0 | xargs -0 sed 's/table/zh/g'&lt;/code&gt;&lt;/p&gt;</summary><category term="edx"></category></entry><entry><title>insight-启用dashboard上标签</title><link href="http://liyouxi.github.io/edx_6.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_6.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;insight-启用dashboard上标签&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source /edx/app/insights/insights_env
+source /edx/app/insights/venvs/insights/bin/activate
+cd /edx/app/insights/edx_analytics_dashboard
+./manage.py switch enable_course_api on --create
+./manage.py switch enable_video_preview on --create
+./manage.py switch enable_engagement_videos_pages on --create
+deactivate
+sudo -u insights nano /edx/etc/insights.yml (correct all urls)
+sudo /edx/bin/supervisorctl restart all
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="edx"></category></entry><entry><title>insight 分析开发介绍</title><link href="http://liyouxi.github.io/edx_4.html" rel="alternate"></link><published>2016-04-27T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-27:edx_4.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;insight 分析开发介绍&lt;/h2&gt;
 &lt;h3&gt;关于Analytics&lt;/h3&gt;
 &lt;p&gt;Analytics的架构图，来自2015 Open edX Conference
