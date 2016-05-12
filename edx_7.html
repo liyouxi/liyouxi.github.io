@@ -91,12 +91,12 @@
 <p>修改 <code>lms.env.json</code></p>
 <div class="highlight"><pre>&quot;MICROSITE\_CONFIGURATION&quot;: {
 &quot;test1&quot;: {
-&quot;domain\_prefix&quot;: &quot;test1&quot;,
+&quot;domain_prefix&quot;: &quot;test1&quot;,
 &quot;university&quot;: &quot;test1&quot;,
-&quot;SITE\_NAME&quot;: &quot;sitename&quot;,
-&quot;logo\_image\_url&quot;: &quot;http://******/logo.png&quot;,
-&quot;course\_org\_filter&quot;: &quot;test1&quot;,
-&quot;course\_about\_show\_social\_links&quot;: false
+&quot;SITE_NAME&quot;: &quot;sitename&quot;,
+&quot;logo_image_url&quot;: &quot;http://******/logo.png&quot;,
+&quot;course_org_filter&quot;: &quot;test1&quot;,
+&quot;course_about_show_social_links&quot;: false
 }
 },
 &quot;MICROSITE_ROOT_DIR&quot;: &quot;/edx/app/edxapp/edx-microsite&quot;,
@@ -110,7 +110,7 @@
 <div class="highlight"><pre>sudo -H -u edxapp bash  
 source /edx/app/edxapp/edxapp_env
 cd /edx/app/edxapp/edx-platform
-paver update\_assets lms --settings aws
+paver update_assets lms --settings aws
 exit
 
 sudo /edx/bin/supervisorctl restart edxapp:

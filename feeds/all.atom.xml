@@ -137,12 +137,12 @@ paver update_assets lms --settings aws
 &lt;p&gt;修改 &lt;code&gt;lms.env.json&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&amp;quot;MICROSITE\_CONFIGURATION&amp;quot;: {
 &amp;quot;test1&amp;quot;: {
-&amp;quot;domain\_prefix&amp;quot;: &amp;quot;test1&amp;quot;,
+&amp;quot;domain_prefix&amp;quot;: &amp;quot;test1&amp;quot;,
 &amp;quot;university&amp;quot;: &amp;quot;test1&amp;quot;,
-&amp;quot;SITE\_NAME&amp;quot;: &amp;quot;sitename&amp;quot;,
-&amp;quot;logo\_image\_url&amp;quot;: &amp;quot;http://******/logo.png&amp;quot;,
-&amp;quot;course\_org\_filter&amp;quot;: &amp;quot;test1&amp;quot;,
-&amp;quot;course\_about\_show\_social\_links&amp;quot;: false
+&amp;quot;SITE_NAME&amp;quot;: &amp;quot;sitename&amp;quot;,
+&amp;quot;logo_image_url&amp;quot;: &amp;quot;http://******/logo.png&amp;quot;,
+&amp;quot;course_org_filter&amp;quot;: &amp;quot;test1&amp;quot;,
+&amp;quot;course_about_show_social_links&amp;quot;: false
 }
 },
 &amp;quot;MICROSITE_ROOT_DIR&amp;quot;: &amp;quot;/edx/app/edxapp/edx-microsite&amp;quot;,
@@ -156,7 +156,7 @@ paver update_assets lms --settings aws
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo -H -u edxapp bash  
 source /edx/app/edxapp/edxapp_env
 cd /edx/app/edxapp/edx-platform
-paver update\_assets lms --settings aws
+paver update_assets lms --settings aws
 exit
 
 sudo /edx/bin/supervisorctl restart edxapp:
@@ -164,7 +164,7 @@ sudo /edx/bin/supervisorctl restart edxapp:
 &lt;h2&gt;课程转移字幕问题解决方案&lt;/h2&gt;
 &lt;p&gt;在Cypress版中字幕的默认格式为&lt;code&gt;table&lt;/code&gt;，将Cypress版中导出的课程再导入到Dogwood版中时会发现字幕无法显示，是因为Dogwood版中字幕格式没有&lt;code&gt;table&lt;/code&gt;这个字段。&lt;/p&gt;
 &lt;h3&gt;解决方案&lt;/h3&gt;
-&lt;p&gt;解压导出的课程文件会发现字幕字段是由video目录下的文件中控制的，因此只需要将video下文件中的&lt;code&gt;table&lt;/code&gt;字段替换成&lt;code&gt;zh&lt;/code&gt;就行。替换命令&lt;code&gt;find ./ -type f -print0 | xargs -0 sed 's/table/zh/g'&lt;/code&gt;&lt;/p&gt;</summary><category term="edx"></category></entry><entry><title>insight-启用dashboard上标签</title><link href="http://liyouxi.github.io/edx_6.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_6.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;解压导出的课程文件会发现字幕字段是由video目录下的文件中控制的，因此只需要将video下文件中的&lt;code&gt;table&lt;/code&gt;字段替换成&lt;code&gt;zh&lt;/code&gt;就行。替换命令&lt;code&gt;find ./ -type f -print0 | xargs -0 sed 's/table/zh/g'&lt;/code&gt;&lt;/p&gt;</summary><category term="edx"></category></entry><entry><title>insight-启用dashboard标签</title><link href="http://liyouxi.github.io/edx_6.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_6.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;insight-启用dashboard上标签&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;source /edx/app/insights/insights_env
 source /edx/app/insights/venvs/insights/bin/activate
