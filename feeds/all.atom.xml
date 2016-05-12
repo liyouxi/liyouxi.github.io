@@ -1,5 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-05-05T00:00:00+08:00</updated><entry><title>课程转移字幕问题解决方案</title><link href="http://liyouxi.github.io/edx_5.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_5.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-05-12T00:00:00+08:00</updated><entry><title>edx开启课程搜索功能</title><link href="http://liyouxi.github.io/edx_10.html" rel="alternate"></link><published>2016-05-12T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-12:edx_10.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;edx开启课程搜索功能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;启用特性： 在&lt;code&gt;*.env.json&lt;/code&gt;中&lt;code&gt;FEATURES&lt;/code&gt;里加上 &lt;code&gt;"ENABLE_COURSEWARE_INDEX": true,&lt;/code&gt; 和&lt;code&gt;"ENABLE_LIBRARY_INDEX": true,&lt;/code&gt;,如果加上&lt;code&gt;"ENABLE_COURSE_DISCOVERY": true,&lt;/code&gt;那么首页的搜索功能也将被开启.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Studio里， 点击Reindex， 索引完成即可搜索，搜索基于elasticsearch
+在devstack中默认搜索功能，如果需要在生产环境里使用，可以参考devstack.py&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cd /edx/app/edxapp/edx-platform/lms/envs&lt;/code&gt;    将以下代码复制到&lt;code&gt;aws.py&lt;/code&gt;最后，该代码来自devstack.py&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;########################## Course Discovery #######################
+_ = lambda s: s
+LANGUAGE_MAP = {&amp;#39;terms&amp;#39;: {lang: display for lang, display in ALL_LANGUAGES}, &amp;#39;name&amp;#39;: _(&amp;#39;Language&amp;#39;)}
+COURSE_DISCOVERY_MEANINGS = {
+&amp;#39;org&amp;#39;: {
+    &amp;#39;name&amp;#39;: _(&amp;#39;Organization&amp;#39;),
+},
+&amp;#39;modes&amp;#39;: {
+    &amp;#39;name&amp;#39;: _(&amp;#39;Course Type&amp;#39;),
+    &amp;#39;terms&amp;#39;: {
+        &amp;#39;honor&amp;#39;: _(&amp;#39;Honor&amp;#39;),
+        &amp;#39;verified&amp;#39;: _(&amp;#39;Verified&amp;#39;),
+    },
+},
+&amp;#39;language&amp;#39;: LANGUAGE_MAP,
+}
+
+FEATURES[&amp;#39;ENABLE_COURSE_DISCOVERY&amp;#39;] = True
+# Setting for overriding default filtering facets for Course discovery
+# COURSE_DISCOVERY_FILTERS = [&amp;quot;org&amp;quot;, &amp;quot;language&amp;quot;, &amp;quot;modes&amp;quot;]
+FEATURES[&amp;#39;COURSES_ARE_BROWSEABLE&amp;#39;] = True
+HOMEPAGE_COURSE_MAX = 9
+
+# Software secure fake page feature flag
+FEATURES[&amp;#39;ENABLE_SOFTWARE_SECURE_FAKE&amp;#39;] = True
+
+# Setting for the testing of Software Secure Result Callback
+VERIFY_STUDENT[&amp;quot;SOFTWARE_SECURE&amp;quot;] = {
+    &amp;quot;API_ACCESS_KEY&amp;quot;: &amp;quot;BBBBBBBBBBBBBBBBBBBB&amp;quot;,
+    &amp;quot;API_SECRET_KEY&amp;quot;: &amp;quot;CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC&amp;quot;,
+}
+
+# Skip enrollment start date filtering
+SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;：&lt;a href="http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/edx_search.html#install-edx-search"&gt;http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/edx_search.html#install-edx-search&lt;/a&gt;&lt;/p&gt;</summary><category term="edx"></category></entry><entry><title>edx启用支付功能</title><link href="http://liyouxi.github.io/edx_8.html" rel="alternate"></link><published>2016-05-12T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-12:edx_8.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;edx启用支付功能&lt;/h2&gt;
+&lt;h3&gt;1、修改配置文件&lt;/h3&gt;
+&lt;p&gt;在lms.env.json添加如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;...
+&amp;quot;FEATURES&amp;quot;: {
+...
+&amp;quot;ENABLE_SHOPPING_CART&amp;quot;: true,
+&amp;quot;ENABLE_PAID_COURSE_REGISTRATION&amp;quot;: true,
+...
+}
+....
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在lms.auth.json添加如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;...
+&amp;quot;CC_PROCESSOR&amp;quot;: {
+    &amp;quot;CyberSource2&amp;quot;: {
+        &amp;quot;ACCESS_KEY&amp;quot;: &amp;quot;{fill in with access key provided by CyberSource}&amp;quot;, 
+        &amp;quot;PROFILE_ID&amp;quot;: &amp;quot;{fill in with profile id provided by CyberSource}&amp;quot;, 
+        &amp;quot;PURCHASE_ENDPOINT&amp;quot;: &amp;quot;{fill in with endpoint url provided by CyberSource}&amp;quot;, 
+        &amp;quot;SECRET_KEY&amp;quot;: &amp;quot;{fill in with secret key provided by CyberSource}&amp;quot;
+    }
+}, 
+&amp;quot;CC_PROCESSOR_NAME&amp;quot;: &amp;quot;CyberSource2&amp;quot;,
+...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;2、添加 course mode&lt;/h3&gt;
+&lt;p&gt;登录django后台，找到&lt;code&gt;Course modes&lt;/code&gt;然后点击&lt;code&gt;Add course mode&lt;/code&gt;添加相关信息，具体如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Course id: 相关联课程ID， 格式为"{org}/{course}/{run}"， 例如 "foo/bar/baz"。&lt;/li&gt;
+&lt;li&gt;Mode slug: 设置为 "honor"。&lt;/li&gt;
+&lt;li&gt;Mode display name: 建议设置为"Honor Code"。&lt;/li&gt;
+&lt;li&gt;Min Price: 课程最低价格。&lt;/li&gt;
+&lt;li&gt;Currency: 价格单位 "usd" (US 美元). 也可以输入其他的 (列如 'chf' 为 瑞士法郎).&lt;/li&gt;
+&lt;li&gt;Expiration Date/Date Time. 到期时间，推荐不填。&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="edx"></category></entry><entry><title>Dogwood添加主题</title><link href="http://liyouxi.github.io/edx_9.html" rel="alternate"></link><published>2016-05-12T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-12:edx_9.html</id><summary type="html">&lt;hr /&gt;
+&lt;h3&gt;1.克隆主题源代码并修改权限&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cd /edx/app/edxapp
+mkdir themes
+cd themes
+sudo git clone -b https://github.com/******/edx-theme
+mv edx-theme my_theme
+cd appsembler-dogwood/static/sass/
+mv _default.scss  _my_theme.scss
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;2. 修改lms.env.json:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo vi /edx/app/edxapp/lms.env.json
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;修改对应值:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;quot;USE_CUSTOM_THEME&amp;quot;: true
+&amp;quot;THEME_NAME&amp;quot;: &amp;quot;******&amp;quot;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;3.编译静态文件&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver update_assets lms --settings aws
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;4.重启edxapp&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo /edx/bin/supervisorctl restart edxapp:
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="edx"></category></entry><entry><title>配置使用MICROSITE</title><link href="http://liyouxi.github.io/edx_7.html" rel="alternate"></link><published>2016-05-09T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-09:edx_7.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;配置使用MICROSITE&lt;/h2&gt;
+&lt;h3&gt;1、域名泛解析到服务器&lt;/h3&gt;
+&lt;h3&gt;2、开启MICROSITE&lt;/h3&gt;
+&lt;p&gt;修改：&lt;code&gt;lms/envs/common.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;vi /edx/app/edxapp/edx-platform/lms/envs/common.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;修改：&lt;code&gt;'USE_MICROSITES': True,&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;3、配置：&lt;/h3&gt;
+&lt;p&gt;修改 &lt;code&gt;lms.env.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;quot;MICROSITE\_CONFIGURATION&amp;quot;: {
+&amp;quot;test1&amp;quot;: {
+&amp;quot;domain\_prefix&amp;quot;: &amp;quot;test1&amp;quot;,
+&amp;quot;university&amp;quot;: &amp;quot;test1&amp;quot;,
+&amp;quot;SITE\_NAME&amp;quot;: &amp;quot;sitename&amp;quot;,
+&amp;quot;logo\_image\_url&amp;quot;: &amp;quot;http://******/logo.png&amp;quot;,
+&amp;quot;course\_org\_filter&amp;quot;: &amp;quot;test1&amp;quot;,
+&amp;quot;course\_about\_show\_social\_links&amp;quot;: false
+}
+},
+&amp;quot;MICROSITE_ROOT_DIR&amp;quot;: &amp;quot;/edx/app/edxapp/edx-microsite&amp;quot;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;修改__init__.py文件&lt;/p&gt;
+&lt;p&gt;edx-platform/lms/djangoapps/branding/__init__.py&lt;/p&gt;
+&lt;p&gt;删除66行的&lt;code&gt;{static_url}&lt;/code&gt;和67行&lt;code&gt;static_url=settings.STATIC_URL&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;重启edxapp,编译lms生效&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo -H -u edxapp bash  
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver update\_assets lms --settings aws
+exit
+
+sudo /edx/bin/supervisorctl restart edxapp:
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="edx"></category></entry><entry><title>课程转移字幕问题解决方案</title><link href="http://liyouxi.github.io/edx_5.html" rel="alternate"></link><published>2016-05-05T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-05-05:edx_5.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;课程转移字幕问题解决方案&lt;/h2&gt;
 &lt;p&gt;在Cypress版中字幕的默认格式为&lt;code&gt;table&lt;/code&gt;，将Cypress版中导出的课程再导入到Dogwood版中时会发现字幕无法显示，是因为Dogwood版中字幕格式没有&lt;code&gt;table&lt;/code&gt;这个字段。&lt;/p&gt;
 &lt;h3&gt;解决方案&lt;/h3&gt;
