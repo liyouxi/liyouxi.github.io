@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/hadoop.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-04-21T17:00:00+08:00</updated><entry><title>hive学习笔记</title><link href="http://liyouxi.github.io/hadoop_1.html" rel="alternate"></link><published>2016-04-21T17:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-21:hadoop_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;hive学习笔记&lt;/h2&gt;
+&lt;p&gt;hive是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并且Hive的操作类似于SQL操作，用户可以使用SQL语句对它进行查询等相关操作。&lt;/p&gt;
+&lt;p&gt;学习链接：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sishuok.com/forum/blogPost/list/6220.html"&gt;深入浅出学hive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.cnblogs.com/sharpxiajun/archive/2013/06/02/3114180.html"&gt;大数据时代的技术hive：hive介绍&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category></entry><entry><title>sqoop学习笔记</title><link href="http://liyouxi.github.io/hadoop_2.html" rel="alternate"></link><published>2016-04-21T17:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-21:hadoop_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;sqoop学习笔记&lt;/h2&gt;
+&lt;p&gt;sqoop它是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、Oracle)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle ,Postgres等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。&lt;/p&gt;
+&lt;p&gt;这个解释把sqoop的特点描述的很清楚了，就是它可以实现Hadoop（hive）与关系数据库数据的互传；这是一个非常强大的功能。&lt;/p&gt;
+&lt;p&gt;利用sqoop这一特性将大大方便Hadoop数据分析的效率。&lt;/p&gt;
+&lt;p&gt;推荐链接：
+&lt;a href="http://www.aboutyun.com/thread-6242-1-1.html"&gt;http://www.aboutyun.com/thread-6242-1-1.html&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category></entry></feed>

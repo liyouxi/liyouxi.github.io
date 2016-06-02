@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/xu-ni-ji.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-04-06T00:00:00+08:00</updated><entry><title>VMWare虚拟机网络配置</title><link href="http://liyouxi.github.io/virtual_1.html" rel="alternate"></link><published>2016-04-06T00:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-04-06:virtual_1.html</id><summary type="html">&lt;h2&gt;VMware虚拟机网路配置&lt;/h2&gt;
+&lt;p&gt;在配置虚拟机网络时，先要弄清楚你的物理机是通过什么方式访问网络的；如果你是通过无线访问网络的请选择桥接模式（虚拟机中的系统设置自动获取IP）； 如果你是通过有线访问网络的请选择NAT方式来配置网络(虚拟机里的系统设置静态IP)。&lt;/p&gt;
+&lt;p&gt;详细操作&lt;a href="http://jingyan.baidu.com/article/4e5b3e1957979d91901e24f1.html"&gt;http://jingyan.baidu.com/article/4e5b3e1957979d91901e24f1.html
+&lt;/a&gt;&lt;/p&gt;</summary><category term="虚拟机"></category></entry></feed>
