@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
+
+    <link rel="stylesheet/less" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/font-awesome.min.css">
+
+
+    <link href="http://liyouxi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ups and Downs Atom">
+
+
+    <link rel="shortcut icon" href="http://7xofqa.com1.z0.glb.clouddn.com/favicon.ico" type="x-icon">
+    <link rel="icon" href="http://7xofqa.com1.z0.glb.clouddn.com/favicon.ico" type="x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+<meta name="author" content="Ups and Downs" />
+<meta name="description" content="edx相关数据 视频行为数据 日志文件的地址：/edx/var ..." />
+<meta name="keywords" content="edx">
+<meta property="og:site_name" content="Ups and Downs"/>
+<meta property="og:title" content="edx主要数据"/>
+<meta property="og:description" content="edx相关数据 视频行为数据 日志文件的地址：/edx/var ..."/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="http://liyouxi.github.io/edx_2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-04-08 00:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://liyouxi.github.io/author/ups-and-downs.html">
+<meta property="article:section" content="edx"/>
+<meta property="article:tag" content="edx"/>
+<meta property="og:image" content="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png">
+  <title>Ups and Downs &ndash; edx主要数据</title>
+</head>
+<body>
+  <aside>
+    <br>
+    <br>
+    <div>
+      <a href="http://liyouxi.github.io">
+        <img src="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png" alt="Ups and Downs" title="Ups and Downs">
+      </a>
+      <h1><a href="http://liyouxi.github.io">Ups and Downs</a></h1>
+      <p>Developer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://liyouxi.github.io/pages/guan-yu-wo.html#guan-yu-wo">关于我</a></li>   <!---->
+          <li><a href="http://blog.just4fun.site/index.html" target="_blank">友情推荐</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-weixin" href="https://wx.qq.com" target="_blank"><i class="fa fa-weixin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/lyxstudy" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-weibo" href="http://weibo.com/u/2108251924" target="_blank"><i class="fa fa-weibo"></i></a></li>
+        <li><a class="sc-qq" href="http://user.qzone.qq.com/958345510" target="_blank"><i class="fa fa-qq"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://liyouxi.github.io">Home</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+     <!--       <a href="http://liyouxi.github.io/feeds/all.atom.xml">Atom</a>
+-->
+    </nav>
+
+<article>
+  <header>
+    <h1 id="edx_2">edx主要数据</h1>
+    <p>Posted on 2016-04-08(星期五) 00:00 in <a href="http://liyouxi.github.io/category/edx.html">edx</a></p>
+  </header>
+  <div>
+    <hr />
+<h2>edx相关数据</h2>
+<h3>视频行为数据</h3>
+<p>日志文件的地址：<code>/edx/var/log/tracking</code></p>
+<p>包含的视频操作事件有：前者为浏览器触发事件名称，后者为移动端触发事件名称</p>
+<p><code>hide_transcript/edx.video.transcript.hidden</code>    //当用户选择CC抑制显示视频记录,浏览器或移动应用程序发出该事件。</p>
+<p><code>load_video/edx.video.loaded</code>   //当视频完全加载完,准备开始,浏览器或移动应用程序发出该
+事件</p>
+<p><code>pause_video/edx.video.paused，stop_video/edx.video.stopped</code>//当用户选择视频播放器的暂停控制,发出<code>pause_video</code>事件。流的视频在浏览器上,当播放的视频文件时自动停止它释放这个事件和<code>stop_video</code>事件</p>
+<p><code>play_video/edx.video.played</code>  //当用户选择播放视频时,发出<code>play_video</code>事件。</p>
+<p><code>seek_video/edx.video.position.changed</code>   //浏览器发出seek_video事件当用户选择不同位置播放视频文件时。</p>
+<p><code>show_transcript/edx.video.transcript.shown</code>  //用户选择显示视频字幕文件时触发该事件</p>
+<p><code>speed_change_video</code>    //当用户在浏览器选择不同的视频播放速度时触发该事件。</p>
+<p><code>video_hide_cc_menu</code>   //隐藏CC菜单时触发</p>
+<p><code>video_show_cc_menu</code>   //显示CC菜单时触发</p>
+<h4>数据记录例子</h4>
+<blockquote>
+<p>{ "_id" : { "$oid" : "564a891b7f437b04c805d11e" }, </p>
+<p>"username" : "XXX",    //用户名</p>
+<p>"context" : </p>
+<p>{ "course_id" : "course-v1:XXXX+XS100+2016_T1",//课程ID </p>
+<p>"org_id" : "GUILIN",   //创建课程组织的ID</p>
+<p>"user_id" : 5,  //用户ID</p>
+<p>"path" : "/event"   //事件生成的地址</p>
+<p>}, 
+</p>
+<p>"event_source" : "browser",      //定的源交互触发事件。这个字段的值是:‘browser’, 
+                              ‘mobile’,‘server’,‘task’</p>
+<p>"name" : "play_video",        //触发事件的类型，取决于event_source</p>
+<p>"ip" : "202.193.64.32",        //触发事件用户的IP </p>
+<p>"agent" : "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 &gt;  Firefox/40.0",          //用户在代理浏览器上触发事件的字符串</p>
+<p>"event" : { "code" : "html5", "id" : "ae334aecc83d4ad3b825ef693afabed9", "currentTime" : 0 },                        //确定每个触发事件的细节。不同的成员字段提供了不同的事件</p>
+<p>"host" : "www.edx.com",         //网站域名</p>
+<p>"session" : "651232ce26e5183e321849dc54c00bdc",   //这一个32个字符的值是一个关键,识别用户的会话。所有浏览器事件和服务器注册事件包括会话的价值。其他服务器事件和移动事件不包括一个会话值。</p>
+<p>"referer" : "http://<strong><em>*</em></strong>*, //从HTTP URI引用页请求头字段。</p>
+<p>"load_date" : { "$date" : "2015-11-17T09:55:39.938+0800" }, </p>
+<p>"accept_language" : "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",`  //可接受的语言</p>
+<p>"time" : "2015-11-16T12:41:24.011849+00:00",     //事件释放的时间</p>
+<p>"course_id" : "course-v1:XXXX+XS100+2016_T1",    //课程ID</p>
+<p>"load_file" : "tracking.log-20151116-1447679821",</p>
+<p>"page" : </p>
+<p>"http://****,   //URL的页面的用户访问事件时发出。移动设备上的视频事件产生,识别视频组件的URL。</p>
+<p>"event_type" : "play_video"    //触发事件的类型，取决于event_source
+ }</p>
+</blockquote>
+<h3>论坛数据</h3>
+<p>论坛里的用户<code>（mongo/cs_comments_service_development/users）</code></p>
+<p>用户订阅帖子的关系<code>（mongo/cs_comments_service_development/subscriptions）</code></p>
+<p>论坛里的帖子和评论<code>（mongo/cs_comments_service_development/contents）</code></p>
+<p>如下为论坛里面的帖子的集合:</p>
+<blockquote>
+<p>{ 
+"_id" : { "$oid" : "564a9a507f437b83aa000001" },     //唯一id,单调递增</p>
+<p>"votes" : {                                    //投票数</p>
+<p>"up" : [],     //支持</p>
+<p>"down" : [],   //不支持</p>
+<p>"up_count" : 0,   //支持的总数</p>
+<p>"down_count" : 0,   //反对的总数</p>
+<p>"count" : 0,     //总投票数</p>
+<p>"point" : 0 },   //网络投票数=up_count</p>
+<p>"visible" : true, </p>
+<p>"abuse_flaggers" : [], </p>
+<p>"historical_abuse_flaggers" : [],   //如果一个讨论的主持人从评论删除不好的评论，所有的用户ID从abuse_flaggers场取出然后写该组中。</p>
+<p>"thread_type" : "discussion",     //确定文章的类型为“问题”或“讨论”。</p>
+<p>"comment_count" : 0,             //评论回复在这个线程的数量。这包括所有的反应和回答,但不包括原始线程开始。</p>
+<p>"at_position_list" : [],        //不再使用。只在子评论(回复)按created_at时间戳排序。</p>
+<p>"title" : "测试",               //帖子的主题</p>
+<p>"body" : "大家好",               //帖子的内容</p>
+<p>"course_id" : "course-v1:XXX+XS100+2016_T1",      //相关课程ID
+"commentable_id" : "d0091754161783ed381f30d45b58657bb1e3129f", </p>
+<p>"_type" : "CommentThread",   //值为CommentThread(帖子) 或 Comment （评论帖子），取决于对象的类型</p>
+<p>"anonymous" : false,                  //是否匿名不显示在用户界面上,但讨论课程的团队和团队成员可以看到作者的用户名。</p>
+<p>"closed" : false,                //如果这是真的,这个线程被论坛版主或管理员关闭。</p>
+<p>"author_id" : "5",                   //作者ID</p>
+<p>"author_username" : "XXX",           //作者名字</p>
+<p>"updated_at" : { "$date" : "2015-11-17T11:09:04.147+0800" },     //更新时间</p>
+<p>"created_at" : { "$date" : "2015-11-17T11:09:04.147+0800" },     //创建时间</p>
+<p>"last_activity_at" : { "$date" : "2015-11-17T11:09:04.148+0800" }   //指示有最后一次的参与该讨论(新文章、编辑等)的时间
+}</p>
+</blockquote>
+<p>如下为 用户与帖子关系的集合
+<img alt="subscriptions1" src="http://7xofqa.com1.z0.glb.clouddn.com/subscriptions1.png" /></p>
+<h3>答题数据</h3>
+<p>学生答题记录（mysql edxapp库中<code>courseware_studentmodule</code>），如下为<code>courseware_studentmodule</code>表的信息。</p>
+<p><img alt="courseware_studentmodule" src="http://7xofqa.com1.z0.glb.clouddn.com/courseware_studentmodule.png" /></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://liyouxi.github.io/tag/edx.html">edx</a>
+    </p>
+  </div>
+</article>
+
+    <footer>
+        <p>“简单不先于复杂，而是在复杂之后” —— Alan Perlis</p>
+    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "edx主要数据",
+  "headline": "edx主要数据",
+  "datePublished": "2016-04-08 00:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Ups and Downs",
+    "url": "http://liyouxi.github.io/author/ups-and-downs.html"
+  },
+  "image": "http://7xofqa.com1.z0.glb.clouddn.com/myblog.png",
+  "url": "http://liyouxi.github.io/edx_2.html",
+  "description": "edx相关数据 视频行为数据 日志文件的地址：/edx/var ..."
+}
+</script></body>
+</html>
