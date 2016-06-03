@@ -108,7 +108,7 @@ sudo /edx/bin/supervisorctl restart all
 
 
 &lt;h3&gt;AnswerDistributionWorkflow&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;错误提示&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、错误提示&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="7" src="http://o84fct7cn.bkt.clouddn.com/AnswerDistributionWorkflow.png" /&gt;&lt;/p&gt;
 &lt;p&gt;错误分析：&lt;/p&gt;
 &lt;p&gt;Hadoop内存限制&lt;/p&gt;
@@ -137,7 +137,7 @@ sudo /edx/bin/supervisorctl restart all
 &lt;p&gt;解决方法：&lt;/p&gt;
 &lt;p&gt;需要下载一个国家ip库并放到cfg中定义的hdfs目录
 &lt;a href="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"&gt;http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;错误提示&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、错误提示&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="8" src="http://o84fct7cn.bkt.clouddn.com/InsertToMysqlCourseEnrollByCountryWorkflow.png" /&gt;&lt;/p&gt;
 &lt;p&gt;错误分析：&lt;/p&gt;
 &lt;p&gt;因为有某些用户的位置是NULL&lt;/p&gt;
