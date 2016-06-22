@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-06-22T18:00:00+08:00</updated><entry><title>Python数据分析之统计描述</title><link href="http://liyouxi.github.io/Python_3.html" rel="alternate"></link><published>2016-06-22T18:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-06-22:Python_3.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ups and Downs</title><link href="http://liyouxi.github.io/" rel="alternate"></link><link href="http://liyouxi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://liyouxi.github.io/</id><updated>2016-06-22T20:00:00+08:00</updated><entry><title>Python Anaconda 入门教程</title><link href="http://liyouxi.github.io/Python_5.html" rel="alternate"></link><published>2016-06-22T20:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-06-22:Python_5.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;Python Anaconda 入门教程&lt;/h2&gt;
+&lt;p&gt;Anaconda的特点：&lt;/p&gt;
+&lt;p&gt;1、包含了众多流行的科学、数学、工程、数据分析的Python包。&lt;/p&gt;
+&lt;p&gt;2、完全开源和免费。&lt;/p&gt;
+&lt;p&gt;3、额外的加速、优化是收费的，但对于学术用途可以申请免费的License。&lt;/p&gt;
+&lt;p&gt;4、全平台支持：Linux、windows、Mac;支持2.6、2.7、3.3、3.4，可自由切换。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Anaconda" src="http://o95s8lrkd.bkt.clouddn.com/Python%20Anaconda.jpg" /&gt;&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>Python数据分析之统计描述</title><link href="http://liyouxi.github.io/Python_3.html" rel="alternate"></link><published>2016-06-22T18:00:00+08:00</published><author><name>Ups and Downs</name></author><id>tag:liyouxi.github.io,2016-06-22:Python_3.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;Python数据分析之统计描述&lt;/h2&gt;
 &lt;p&gt;describe属性可以对数据的统计特性进行描述：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;print df.describe()
