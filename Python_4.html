@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
+
+    <link rel="stylesheet/less" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://liyouxi.github.io/theme/stylesheet/font-awesome.min.css">
+
+
+    <link href="http://liyouxi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ups and Downs Atom">
+
+
+    <link rel="shortcut icon" href="http://7xofqa.com1.z0.glb.clouddn.com/favicon.ico" type="x-icon">
+    <link rel="icon" href="http://7xofqa.com1.z0.glb.clouddn.com/favicon.ico" type="x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+<meta name="author" content="Ups and Downs" />
+<meta name="description" content="Python数据分析之可视化 matpalotlib库是Python最流行的可视化库 # Import the module ..." />
+<meta name="keywords" content="Python">
+<meta property="og:site_name" content="Ups and Downs"/>
+<meta property="og:title" content="Python数据分析之可视化"/>
+<meta property="og:description" content="Python数据分析之可视化 matpalotlib库是Python最流行的可视化库 # Import the module ..."/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:url" content="http://liyouxi.github.io/Python_4.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-06-22 18:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://liyouxi.github.io/author/ups-and-downs.html">
+<meta property="article:section" content="Python数据分析"/>
+<meta property="article:tag" content="Python"/>
+<meta property="og:image" content="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png">
+  <title>Ups and Downs &ndash; Python数据分析之可视化</title>
+</head>
+<body>
+  <aside>
+    <br>
+    <br>
+    <div>
+      <a href="http://liyouxi.github.io">
+        <img src="http://7xofqa.com1.z0.glb.clouddn.com/myblog.png" alt="Ups and Downs" title="Ups and Downs">
+      </a>
+      <h1><a href="http://liyouxi.github.io">Ups and Downs</a></h1>
+      <p>Developer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://liyouxi.github.io/pages/guan-yu-wo.html#guan-yu-wo">关于我</a></li>   <!---->
+          <li><a href="http://blog.just4fun.site/index.html" target="_blank">友情推荐</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-weixin" href="https://wx.qq.com" target="_blank"><i class="fa fa-weixin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/lyxstudy" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-weibo" href="http://weibo.com/u/2108251924" target="_blank"><i class="fa fa-weibo"></i></a></li>
+        <li><a class="sc-qq" href="http://user.qzone.qq.com/958345510" target="_blank"><i class="fa fa-qq"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://liyouxi.github.io">Home</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+     <!--       <a href="http://liyouxi.github.io/feeds/all.atom.xml">Atom</a>
+-->
+    </nav>
+
+<article>
+  <header>
+    <h1 id="Python_4">Python数据分析之可视化</h1>
+    <p>Posted on 2016-06-22(星期三) 18:00 in <a href="http://liyouxi.github.io/category/pythonshu-ju-fen-xi.html">Python数据分析</a></p>
+  </header>
+  <div>
+    <hr />
+<h2>Python数据分析之可视化</h2>
+<p>matpalotlib库是Python最流行的可视化库
+<img alt="box" src="http://o95s8lrkd.bkt.clouddn.com/Image.jpg" /></p>
+<div class="highlight"><pre><span class="c1"># Import the module for plotting</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;box&#39;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>可以用pandas模块中集成R的ggplot主题来美化图表。要使用ggplot，只需要在上述代码中多加一行</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">mpl_style</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span> <span class="c1"># Sets the plotting display theme to ggplot2</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>效果如下图表：</p>
+<p><img alt="ggplot" src="http://o95s8lrkd.bkt.clouddn.com/Image1.jpg" /></p>
+<p>seaborn模块，该模块也是一个统计数据可视化库：</p>
+<p><img alt="seaborn" src="http://o95s8lrkd.bkt.clouddn.com/Image2.jpg" /></p>
+<div class="highlight"><pre><span class="c1"># Import the seaborn library</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="c1"># Do the boxplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">widths</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;pastel&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>多性感的盒式图：</p>
+<p><img alt="violinplot" src="http://o95s8lrkd.bkt.clouddn.com/Image3.jpg" /></p>
+<div class="highlight"><pre>plt.show(sns.violinplot(df, widths = 0.5, color = &quot;pastel&quot;))
+</pre></div>
+
+
+<p><img alt="distplot" src="http://o95s8lrkd.bkt.clouddn.com/Image4.jpg" /></p>
+<div class="highlight"><pre>plt.show(sns.distplot(df.ix[:,2], rug = True, bins = 15))
+</pre></div>
+
+
+<p><img alt="jointplot" src="http://o95s8lrkd.bkt.clouddn.com/Image5.jpg" /></p>
+<div class="highlight"><pre>with sns.axes_style(&quot;white&quot;):
+plt.show(sns.jointplot(df.ix[:,1], df.ix[:,2], kind = &quot;kde&quot;))
+</pre></div>
+
+
+<p><img alt="lmplot" src="http://o95s8lrkd.bkt.clouddn.com/Image6.jpg" /></p>
+<div class="highlight"><pre>plt.show(sns.lmplot(&quot;Benguet&quot;, &quot;Ifugao&quot;, df))
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://liyouxi.github.io/tag/python.html">Python</a>
+    </p>
+  </div>
+</article>
+
+    <footer>
+        <p>“简单不先于复杂，而是在复杂之后” —— Alan Perlis</p>
+    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Python数据分析之可视化",
+  "headline": "Python数据分析之可视化",
+  "datePublished": "2016-06-22 18:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Ups and Downs",
+    "url": "http://liyouxi.github.io/author/ups-and-downs.html"
+  },
+  "image": "http://7xofqa.com1.z0.glb.clouddn.com/myblog.png",
+  "url": "http://liyouxi.github.io/Python_4.html",
+  "description": "Python数据分析之可视化 matpalotlib库是Python最流行的可视化库 # Import the module ..."
+}
+</script></body>
+</html>
